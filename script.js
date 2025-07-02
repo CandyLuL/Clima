@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     // *** TU API KEY DE OPENWEATHERMAP HA SIDO INSERTADA AQUÍ ***
-    const API_KEY = '855debca4b801dedf2ceb5fb39d0eb25';
+    const API_KEY = '469bb8bf6db3aad7c48d46857b31a95d';
     const BASE_URL = 'https://api.openweathermap.org/data/2.5/weather';
 
     // Elementos del DOM
