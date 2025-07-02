@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App del Clima | Saul H.</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="weather-app">
+        <div class="search-box">
+            <input type="text" id="city-input" placeholder="Ingresa una ciudad...">
+            <button id="search-btn" aria-label="Buscar clima">
+                <span class="material-icons">search</span>
+            </button>
+        </div>
+
+        <div class="weather-display">
+            <p class="error-message" id="error-message"></p>
+
+            <div class="loading-spinner" id="loading-spinner"></div>
+
+            <div class="weather-info" id="weather-info">
+                <h2 class="city-name" id="city-name"></h2>
+                <div class="main-temp-icon">
+                    <img id="weather-icon" src="" alt="Icono del clima">
+                    <p class="temperature" id="temperature"></p>
+                </div>
+                <p class="description" id="description"></p>
+                <p class="min-max-temp" id="min-max-temp"></p>
+
+                <div class="details-grid">
+                    <div class="detail-item">
+                        <span class="material-icons">opacity</span>
+                        <div>
+                            <p class="detail-value" id="humidity"></p>
+                            <p class="detail-label">Humedad</p>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <span class="material-icons">air</span>
+                        <div>
+                            <p class="detail-value" id="wind-speed"></p>
+                            <p class="detail-label">Viento</p>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <span class="material-icons">thermostat</span>
+                        <div>
+                            <p class="detail-value" id="feels-like"></p>
+                            <p class="detail-label">Sensación</p>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <span class="material-icons">compress</span>
+                        <div>
+                            <p class="detail-value" id="pressure"></p>
+                            <p class="detail-label">Presión</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
