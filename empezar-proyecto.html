@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empezar Proyecto - Agencia Digital</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-icons-font@v12/font/simple-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="logo"><img src="images/logo-de-mi-marca.png" alt="Logo de [Nombre de tu Marca]"></div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="servicios-detalle.html#servicios-detallados">Servicios</a></li>
+                    <li><a href="servicios-detalle.html#nuestro-proceso">Proceso</a></li>
+                    <li><a href="servicios-detalle.html#proyectos-destacados">Proyectos</a></li>
+                    <li><a href="index.html#contact">Contacto</a></li>
+                </ul>
+            </nav>
+            <button class="cta-button">Empezar Proyecto</button>
+        </div>
+    </header>
+
+    <section class="hero-subpage-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Cuéntanos sobre tu <span class="accent">Proyecto.</span></h1>
+                <p class="subheadline">Comparte tus ideas, requerimientos y preferencias para tu nueva página web. ¡Estamos emocionados de colaborar contigo!</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="start-project-form-section">
+        <div class="container">
+            <h2>Describe tu Proyecto</h2>
+            <form action="#" method="POST" class="start-project-form">
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="tipo-proyecto">¿Qué tipo de proyecto tienes en mente?</label>
+                    <select id="tipo-proyecto" name="tipo-proyecto">
+                        <option value="">Selecciona una opción</option>
+                        <option value="sitio-web-informativo">Sitio Web Informativo</option>
+                        <option value="tienda-online">Tienda Online / E-commerce</option>
+                        <option value="aplicacion-web">Aplicación Web</option>
+                        <option value="aplicacion-movil">Aplicación Móvil</option>
+                        <option value="diseno-ui-ux">Diseño UI/UX</option>
+                        <option value="marketing-digital">Marketing Digital</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="descripcion">Cuéntanos sobre tu idea y lo que te gustaría lograr:</label>
+                    <textarea id="descripcion" name="descripcion" rows="7" placeholder="Describe tus objetivos, la funcionalidad deseada, ejemplos de sitios que te gustan, y cualquier otra idea que tengas."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="preferencias-diseno">¿Tienes alguna preferencia de diseño o ejemplos que te inspiren?</label>
+                    <textarea id="preferencias-diseno" name="preferencias-diseno" rows="4" placeholder="Comparte enlaces a sitios web que te gusten en términos de diseño, estructura o funcionalidad."></textarea>
+                </div>
+                <button type="submit" class="primary-button">Enviar Información del Proyecto</button>
+                <p class="form-note">Nos pondremos en contacto contigo para discutir tu proyecto en detalle.</p>
+            </form>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-logo">Logolpsum</div>
+            <p>&copy; 2025 Todos los derechos reservados.</p>
+            <div class="social-links">
+                <a href="https://github.com/CandyLuL" target="_blank" aria-label="GitHub de Saul Hernández"><i class="si si-github"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="si si-linkedin"></i></a>
+                <a href="#" aria-label="Twitter"><i class="si si-x"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
