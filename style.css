@@ -486,6 +486,105 @@ ul {
     margin: 0;
 }
 
+/* Sección de Contacto */
+.contact-section {
+    background-color: #0A0A0A;
+    padding: 80px 0;
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Información de contacto a la izquierda, formulario a la derecha */
+    gap: 50px;
+    background-color: #1A1A1A;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    border: 1px solid #2C2C2C;
+}
+
+.contact-info h3,
+.contact-form h3 {
+    font-size: 1.8em;
+    color: #FFFFFF;
+    margin-bottom: 25px;
+}
+
+.contact-info p {
+    color: #B0B0B0;
+    font-size: 1.05em;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-info .material-icons {
+    color: #50fa7b;
+    font-size: 1.5em;
+}
+
+.contact-info .social-links {
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+}
+
+.contact-info .social-links a {
+    color: #B0B0B0;
+    font-size: 2em;
+    transition: color 0.3s ease;
+}
+
+.contact-info .social-links a:hover {
+    color: #50fa7b;
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    color: #FFFFFF;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 0.95em;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #2C2C2C;
+    color: #E0E0E0;
+    font-size: 1em;
+    box-sizing: border-box; /* Incluye padding y borde en el ancho total */
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+    border-color: #50fa7b;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(80, 250, 123, 0.3);
+}
+
+.contact-form textarea {
+    resize: vertical; /* Permite redimensionar verticalmente */
+}
+
+.contact-form .primary-button {
+    width: auto; /* Para que el botón no ocupe todo el ancho */
+    padding: 15px 35px;
+    font-size: 1.1em;
+    margin-top: 15px;
+}
+
+
 /* Estilos para el Footer (básicos) */
 .main-footer {
     background-color: #1A1A1A;
@@ -508,7 +607,8 @@ ul {
     .about-us-section .container,
     .services-section .container,
     .awards-section .container,
-    .faq-section .container { /* Añadir faq a esta media query */
+    .faq-section .container,
+    .contact-content { /* Añadir contact-content a esta media query */
         grid-template-columns: 1fr; /* Una columna en tablets */
     }
     .hero-image, .about-image {
@@ -526,6 +626,9 @@ ul {
     }
     .services-grid, .awards-grid { /* Ajuste para servicios y awards en pantallas más pequeñas */
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    .contact-info {
+        margin-bottom: 40px; /* Espacio entre info y formulario en móvil */
     }
 }
 
@@ -630,5 +733,25 @@ ul {
     }
     .faq-item.active .faq-answer {
         padding: 15px 20px 20px;
+    }
+    .contact-info h3, .contact-form h3 {
+        font-size: 1.5em;
+    }
+    .contact-info p {
+        font-size: 0.95em;
+    }
+    .contact-info .social-links a {
+        font-size: 1.8em;
+    }
+    .contact-form label {
+        font-size: 0.9em;
+    }
+    .contact-form input, .contact-form textarea {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+    .contact-form .primary-button {
+        padding: 12px 25px;
+        font-size: 1em;
     }
 }
