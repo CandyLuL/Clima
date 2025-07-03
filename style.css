@@ -364,6 +364,127 @@ ul {
     transform: translateX(5px); /* Pequeña animación al pasar el ratón */
 }
 
+/* Sección de Premios (Awards) */
+.awards-section {
+    background-color: #0A0A0A;
+    padding: 80px 0;
+}
+
+.awards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 4 columnas en desktop */
+    gap: 30px;
+    text-align: left;
+}
+
+.award-card {
+    background-color: #1A1A1A;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    border: 1px solid #2C2C2C;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.award-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    border-color: #50fa7b; /* Iluminar al hover */
+}
+
+.award-year {
+    font-size: 1.1em;
+    color: #50fa7b; /* Color de acento para el año */
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: block; /* Asegura que tome su propia línea */
+}
+
+.award-card h3 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    color: #FFFFFF;
+}
+
+.award-card p {
+    font-size: 0.9em;
+    color: #B0B0B0;
+    line-height: 1.5;
+}
+
+/* Sección de Preguntas Frecuentes (FAQ) */
+.faq-section {
+    background-color: #0A0A0A;
+    padding: 80px 0;
+}
+
+.faq-accordion {
+    max-width: 800px; /* Ancho máximo para el acordeón */
+    margin: 0 auto;
+}
+
+.faq-item {
+    background-color: #1A1A1A;
+    border: 1px solid #2C2C2C;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    overflow: hidden; /* Asegura que la respuesta se oculte correctamente */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 25px;
+    cursor: pointer;
+    background-color: #1A1A1A;
+    transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: #2C2C2C;
+}
+
+.faq-question h3 {
+    font-size: 1.2em;
+    color: #FFFFFF;
+    margin: 0;
+    flex-grow: 1; /* Permite que el texto crezca */
+}
+
+.accordion-icon {
+    font-size: 1.8em;
+    color: #50fa7b;
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .accordion-icon {
+    transform: rotate(45deg); /* Gira el icono de "+" a "x" */
+}
+
+.faq-answer {
+    padding: 0 25px;
+    max-height: 0; /* Inicialmente oculto */
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding 0.4s ease-out; /* Transición para mostrar/ocultar */
+    background-color: #2C2C2C; /* Fondo de la respuesta */
+}
+
+.faq-item.active .faq-answer {
+    max-height: 200px; /* Suficiente altura para la respuesta */
+    padding: 15px 25px 20px; /* Padding cuando está activo */
+}
+
+.faq-answer p {
+    font-size: 1em;
+    color: #B0B0B0;
+    line-height: 1.6;
+    margin: 0;
+}
 
 /* Estilos para el Footer (básicos) */
 .main-footer {
@@ -385,7 +506,9 @@ ul {
 @media (max-width: 992px) {
     .hero-section .container,
     .about-us-section .container,
-    .services-section .container {
+    .services-section .container,
+    .awards-section .container,
+    .faq-section .container { /* Añadir faq a esta media query */
         grid-template-columns: 1fr; /* Una columna en tablets */
     }
     .hero-image, .about-image {
@@ -401,8 +524,8 @@ ul {
     .about-cards-grid {
         grid-template-columns: 1fr; /* Una columna en móviles */
     }
-    .services-grid {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Ajuste para servicios en pantallas más pequeñas */
+    .services-grid, .awards-grid { /* Ajuste para servicios y awards en pantallas más pequeñas */
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     }
 }
 
@@ -483,5 +606,29 @@ ul {
     }
     .service-card p {
         font-size: 0.9em;
+    }
+    .awards-grid { /* Ajuste para awards en móviles */
+        grid-template-columns: 1fr;
+    }
+    .award-card h3 {
+        font-size: 1.2em;
+    }
+    .award-card p {
+        font-size: 0.85em;
+    }
+    .faq-question h3 {
+        font-size: 1em;
+    }
+    .faq-answer p {
+        font-size: 0.9em;
+    }
+    .faq-question {
+        padding: 15px 20px;
+    }
+    .faq-answer {
+        padding: 0 20px;
+    }
+    .faq-item.active .faq-answer {
+        padding: 15px 20px 20px;
     }
 }
