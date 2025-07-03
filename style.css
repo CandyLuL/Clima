@@ -58,6 +58,12 @@ ul {
     color: #FFFFFF;
 }
 
+.logo img { /* Estilo para el logo de imagen */
+    max-height: 40px; /* Altura máxima del logo */
+    width: auto;
+    vertical-align: middle;
+}
+
 .main-nav ul {
     display: flex;
     gap: 30px;
@@ -759,21 +765,449 @@ ul {
     margin-bottom: 10px;
 }
 
+/* Estilos para la página de Servicios Detallados (servicios-detalle.html) */
+
+/* Hero Section para Subpáginas */
+.hero-subpage-section {
+    background: linear-gradient(180deg, #1A1A1A 0%, #0A0A0A 100%);
+    padding: 150px 0 80px; /* Ajuste de padding */
+    position: relative;
+    overflow: hidden;
+    text-align: center; /* Centrar contenido */
+}
+
+.hero-subpage-section .container {
+    display: flex; /* Usar flexbox para centrar fácilmente */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-subpage-section .hero-content h1 {
+    font-size: 3em; /* Un poco más pequeño que el hero principal */
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-subpage-section .hero-content .subheadline {
+    color: #B0B0B0;
+    font-size: 1.1em;
+    line-height: 1.8;
+    max-width: 800px; /* Limitar ancho del texto */
+    margin-bottom: 30px;
+}
+
+/* Sección de Servicios Detallados */
+.services-detailed-section {
+    background-color: #0A0A0A;
+    padding: 80px 0;
+}
+
+.service-category {
+    background-color: #1A1A1A;
+    padding: 35px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    border: 1px solid #2C2C2C;
+    margin-bottom: 40px; /* Espacio entre categorías */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.service-category:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    border-color: #50fa7b;
+}
+
+.service-category h3 {
+    font-size: 2em;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.service-category .service-icon {
+    font-size: 2.5em;
+    color: #50fa7b;
+}
+
+.service-category p {
+    font-size: 1.05em;
+    color: #B0B0B0;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.service-category ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 2 o 3 columnas de lista */
+    gap: 10px 20px;
+}
+
+.service-category ul li {
+    font-size: 1em;
+    color: #E0E0E0;
+    position: relative;
+    padding-left: 25px;
+}
+
+.service-category ul li::before {
+    content: '•'; /* Un punto o icono */
+    color: #50fa7b;
+    font-size: 1.2em;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* Sección "Nuestro Proceso" */
+.our-process-section {
+    background-color: #0A0A0A;
+    padding: 80px 0;
+}
+
+.process-steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.process-step-card {
+    background-color: #1A1A1A;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    border: 1px solid #2C2C2C;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.process-step-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    border-color: #50fa7b;
+}
+
+.process-step-card .process-icon {
+    font-size: 3.5em;
+    color: #50fa7b;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.process-step-card h3 {
+    font-size: 1.5em;
+    color: #FFFFFF;
+    margin-bottom: 15px;
+}
+
+.process-step-card p {
+    font-size: 0.95em;
+    color: #B0B0B0;
+    line-height: 1.6;
+}
+
+/* Sección Extendida del Equipo (Si se incluye en el HTML) */
+.team-extended-section {
+    background-color: #0A0A0A;
+    padding: 80px 0;
+}
+
+.team-members-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.team-member-card {
+    background-color: #1A1A1A;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    border: 1px solid #2C2C2C;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.team-member-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    border-color: #50fa7b;
+}
+
+.team-member-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; /* Circular */
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 3px solid #50fa7b; /* Borde de acento */
+    box-shadow: 0 0 0 5px rgba(80, 250, 123, 0.2);
+}
+
+.team-member-card h3 {
+    font-size: 1.6em;
+    color: #FFFFFF;
+    margin-bottom: 5px;
+}
+
+.team-member-card .role {
+    font-size: 0.95em;
+    color: #B0B0B0;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.team-member-card .bio {
+    font-size: 0.9em;
+    color: #B0B0B0;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.member-social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.member-social-links a .si {
+    font-size: 1.8em;
+    color: #B0B0B0;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.member-social-links a:hover .si {
+    color: #50fa7b;
+    transform: translateY(-3px);
+}
+
+/* Sección de Proyectos Destacados (en la página de detalle) */
+.featured-projects-section {
+    background-color: #0A0A0A;
+    padding: 80px 0;
+}
+
+.featured-projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.featured-project-card {
+    background-color: #1A1A1A;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    border: 1px solid #2C2C2C;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.featured-project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    border-color: #50fa7b;
+}
+
+.featured-project-card .featured-project-icon {
+    font-size: 3.5em;
+    color: #50fa7b;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.featured-project-card h3 {
+    font-size: 1.5em;
+    color: #FFFFFF;
+    margin-bottom: 15px;
+}
+
+.featured-project-card p {
+    font-size: 0.95em;
+    color: #B0B0B0;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+/* Sección de Llamada a la Acción (CTA) al final de la página */
+.cta-section-bottom {
+    background-color: #1A1A1A;
+    padding: 60px 0;
+    text-align: center;
+    border-top: 1px solid #2C2C2C;
+    border-bottom: 1px solid #2C2C2C;
+}
+
+.cta-section-bottom h2 {
+    font-size: 2.5em;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+.cta-section-bottom p {
+    font-size: 1.1em;
+    color: #B0B0B0;
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+
+/* Sección del Formulario de Inicio de Proyecto */
+.start-project-form-section {
+    background-color: #0A0A0A;
+    padding: 80px 0;
+}
+
+.start-project-form-section .container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #1A1A1A;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    border: 1px solid #2C2C2C;
+}
+
+.start-project-form-section h2 {
+    font-size: 2em;
+    color: #FFFFFF;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.start-project-form .form-group {
+    margin-bottom: 25px;
+    text-align: left; /* Alinea los labels a la izquierda */
+}
+
+.start-project-form label {
+    display: block;
+    color: #FFFFFF;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 0.95em;
+}
+
+.start-project-form input,
+.start-project-form textarea,
+.start-project-form select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #2C2C2C;
+    color: #E0E0E0;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+.start-project-form input:focus,
+.start-project-form textarea:focus,
+.start-project-form select:focus {
+    border-color: #50fa7b;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(80, 250, 123, 0.3);
+}
+
+.start-project-form textarea {
+    resize: vertical;
+}
+
+.start-project-form select {
+    appearance: none; /* Quita la flecha por defecto en algunos navegadores */
+    background-image: url('data:image/svg+xml;charset=UTF-8,<svg fill="%23B0B0B0" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+}
+
+.start-project-form .primary-button {
+    width: auto;
+    padding: 15px 35px;
+    font-size: 1.1em;
+    margin-top: 20px;
+    display: block; /* Centrar el botón */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.start-project-form .form-note {
+    color: #B0B0B0;
+    font-size: 0.9em;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Estilos de las páginas de Detalle de Proyecto (ej. proyecto-gestion.html) */
+.project-details-content {
+    background-color: #0A0A0A;
+    padding: 60px 0;
+}
+
+.project-details-content .container {
+    max-width: 900px; /* Un poco más amplio que el formulario */
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #1A1A1A;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    border: 1px solid #2C2C2C;
+    color: #E0E0E0;
+    font-size: 1.1em;
+    line-height: 1.7;
+    text-align: left; /* Alineación de texto */
+}
+
+.project-details-content .container h3 {
+    font-size: 1.8em;
+    color: #50fa7b; /* Color de acento para subtítulos */
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.project-details-content .container p {
+    margin-bottom: 20px;
+}
+
+.project-details-content .container ul {
+    list-style: disc; /* Vuelven las viñetas */
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.project-details-content .container ul li {
+    margin-bottom: 8px;
+    color: #E0E0E0;
+    font-size: 1em;
+}
+
+
 /* Responsive */
 @media (max-width: 992px) {
     .hero-section .container,
     .about-us-section .container,
     .services-section .container,
     .awards-section .container,
-    .projects-section .container, /* Añadido projects a la media query */
-    .testimonials-section .container, /* Añadido testimonials a la media query */
+    .projects-section .container,
+    .testimonials-section .container,
     .faq-section .container,
     .contact-content,
-    .intro-section-services .container, /* Añadido intro-section-services a la media query */
-    .hero-subpage-section .container, /* Añadido hero-subpage-section a la media query */
-    .services-detailed-section .container, /* Añadido services-detailed-section a la media query */
-    .our-process-section .container, /* Añadido our-process-section a la media query */
-    .cta-section-bottom .container /* Añadido cta-section-bottom a la media query */ {
+    .intro-section-services .container,
+    .hero-subpage-section .container,
+    .services-detailed-section .container,
+    .our-process-section .container,
+    .cta-section-bottom .container,
+    .featured-projects-section .container,
+    .start-project-form-section .container, /* Añadido start-project-form-section */
+    .project-details-content .container { /* Añadido project-details-content */
         grid-template-columns: 1fr; /* Una columna en tablets */
     }
     .hero-image, .about-image {
@@ -789,7 +1223,7 @@ ul {
     .about-cards-grid {
         grid-template-columns: 1fr; /* Una columna en móviles */
     }
-    .services-grid, .awards-grid, .projects-grid, .testimonials-grid { /* Ajuste para grids en pantallas más pequeñas */
+    .services-grid, .awards-grid, .projects-grid, .testimonials-grid, .process-steps-grid, .team-members-grid, .featured-projects-grid { /* Ajuste para grids en pantallas más pequeñas */
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     }
     .contact-info {
@@ -810,6 +1244,10 @@ ul {
     }
     .cta-section-bottom h2 {
         font-size: 2em;
+    }
+    .start-project-form-section .container,
+    .project-details-content .container {
+        padding: 30px;
     }
 }
 
@@ -885,13 +1323,13 @@ ul {
     .section-header .section-description {
         font-size: 0.95em;
     }
-    .service-card h3, .projects-grid .project-card h3, .testimonial-card .client-name {
+    .service-card h3, .projects-grid .project-card h3, .testimonial-card .client-name, .featured-projects-section .featured-project-card h3 {
         font-size: 1.3em;
     }
-    .service-card p, .projects-grid .project-card p, .testimonial-card .quote {
+    .service-card p, .projects-grid .project-card p, .testimonial-card .quote, .featured-projects-section .featured-project-card p {
         font-size: 0.9em;
     }
-    .awards-grid, .testimonials-grid, .projects-grid { /* Ajuste para grids en móviles */
+    .awards-grid, .testimonials-grid, .projects-grid, .featured-projects-grid { /* Ajuste para grids en móviles */
         grid-template-columns: 1fr;
     }
     .award-card h3 {
@@ -968,5 +1406,15 @@ ul {
     }
     .cta-section-bottom p {
         font-size: 0.9em;
+    }
+    .start-project-form-section .container,
+    .project-details-content .container {
+        padding: 20px; /* Ajuste en móvil */
+    }
+    .project-details-content .container h3 {
+        font-size: 1.5em;
+    }
+    .project-details-content .container p, .project-details-content .container ul li {
+        font-size: 0.95em;
     }
 }
