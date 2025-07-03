@@ -3,67 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>App del Clima | Saul H.</title>
+    <title>Agencia Digital - Diseño Profesional</title>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="weather-app">
-        <div class="search-box">
-            <input type="text" id="city-input" placeholder="Ingresa una ciudad...">
-            <button id="search-btn" aria-label="Buscar clima">
-                <span class="material-icons">search</span>
-            </button>
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">Logolpsum</div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#awards">Awards</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#testimonials">Testimonial</a></li>
+                </ul>
+            </nav>
+            <button class="cta-button">Get Started</button>
         </div>
+    </header>
 
-        <div class="weather-display">
-            <p class="error-message" id="error-message"></p>
-
-            <div class="loading-spinner" id="loading-spinner"></div>
-
-            <div class="weather-info" id="weather-info">
-                <h2 class="city-name" id="city-name"></h2>
-                <div class="main-temp-icon">
-                    <img id="weather-icon" src="" alt="Icono del clima">
-                    <p class="temperature" id="temperature"></p>
-                </div>
-                <p class="description" id="description"></p>
-                <p class="min-max-temp" id="min-max-temp"></p>
-
-                <div class="details-grid">
-                    <div class="detail-item">
-                        <span class="material-icons">opacity</span>
-                        <div>
-                            <p class="detail-value" id="humidity"></p>
-                            <p class="detail-label">Humedad</p>
-                        </div>
-                    </div>
-                    <div class="detail-item">
-                        <span class="material-icons">air</span>
-                        <div>
-                            <p class="detail-value" id="wind-speed"></p>
-                            <p class="detail-label">Viento</p>
-                        </div>
-                    </div>
-                    <div class="detail-item">
-                        <span class="material-icons">thermostat</span>
-                        <div>
-                            <p class="detail-value" id="feels-like"></p>
-                            <p class="detail-label">Sensación</p>
-                        </div>
-                    </div>
-                    <div class="detail-item">
-                        <span class="material-icons">compress</span>
-                        <div>
-                            <p class="detail-value" id="pressure"></p>
-                            <p class="detail-label">Presión</p>
-                        </div>
-                    </div>
+    <section id="hero" class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Digital Brilliance <span class="accent">Unleashed.</span></h1>
+                <p class="subheadline">Elevate your brand with our web design expertise, where digital brilliance meets innovative strategies, and results-driven solutions redefine your online presence.</p>
+                <div class="hero-buttons">
+                    <a href="#get-started" class="primary-button">Get Started <span class="arrow-icon"></span></a>
+                    <a href="#leading-companies" class="secondary-button">Trusted by 4,000 leading companies</a>
                 </div>
             </div>
+            <div class="hero-image">
+                </div>
         </div>
-    </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-logo">Logolpsum</div>
+            <p>&copy; 2025 All rights reserved.</p>
+            <div class="social-links">
+                </div>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
