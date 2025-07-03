@@ -415,6 +415,171 @@ ul {
     line-height: 1.5;
 }
 
+/* Sección de Proyectos */
+.projects-section {
+    background-color: #0A0A0A;
+    padding: 80px 0;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.projects-grid .project-card { /* Usamos service-card como base para los proyectos */
+    background-color: #1A1A1A;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    border: 1px solid #2C2C2C;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    text-align: center; /* Centrar contenido de la tarjeta */
+    display: flex;
+    flex-direction: column;
+}
+
+.projects-grid .project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    border-color: #50fa7b;
+}
+
+.projects-grid .project-card img {
+    max-width: 100%;
+    height: 180px; /* Altura fija para las previews */
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.projects-grid .project-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #FFFFFF;
+}
+
+.projects-grid .project-card p {
+    font-size: 0.95em;
+    color: #B0B0B0;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1; /* Para que el texto ocupe el espacio */
+}
+
+.project-card-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: auto; /* Empuja los enlaces al final de la tarjeta */
+}
+
+.btn-primary-small,
+.btn-secondary-small {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 0.9em;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    border: 1px solid;
+}
+
+.btn-primary-small {
+    background-color: #50fa7b;
+    color: #1A1A1A;
+    border-color: #50fa7b;
+}
+
+.btn-primary-small:hover {
+    background-color: #34d962;
+    border-color: #34d962;
+}
+
+.btn-secondary-small {
+    background-color: transparent;
+    color: #B0B0B0;
+    border-color: #B0B0B0;
+}
+
+.btn-secondary-small:hover {
+    border-color: #FFFFFF;
+    color: #FFFFFF;
+}
+
+/* Sección de Testimonios */
+.testimonials-section {
+    background-color: #0A0A0A;
+    padding: 80px 0;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.testimonial-card {
+    background-color: #1A1A1A;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    border: 1px solid #2C2C2C;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+.testimonial-card .quote {
+    font-size: 1.1em;
+    color: #E0E0E0;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    font-style: italic;
+    position: relative;
+    padding-left: 20px; /* Espacio para la comilla */
+}
+
+.testimonial-card .quote::before {
+    content: '“'; /* Comilla de apertura */
+    font-family: 'Poppins', sans-serif;
+    font-size: 4em;
+    color: rgba(80, 250, 123, 0.2); /* Color tenue del acento */
+    position: absolute;
+    left: 0;
+    top: -10px;
+    line-height: 0.8;
+}
+
+.client-info {
+    text-align: right;
+    border-top: 1px solid #2C2C2C;
+    padding-top: 15px;
+}
+
+.client-name {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #50fa7b; /* Nombre del cliente con acento */
+    display: block;
+    margin-bottom: 5px;
+}
+
+.client-title {
+    font-size: 0.9em;
+    color: #B0B0B0;
+    display: block;
+}
+
+
 /* Sección de Preguntas Frecuentes (FAQ) */
 .faq-section {
     background-color: #0A0A0A;
@@ -530,15 +695,20 @@ ul {
     gap: 20px;
 }
 
-.contact-info .social-links a {
-    color: #B0B0B0;
-    font-size: 2em;
-    transition: color 0.3s ease;
+/* Estilos para los iconos de Simple Icons */
+.contact-info .social-links a .si,
+.main-footer .social-links a .si {
+    font-size: 2em; /* Tamaño del icono */
+    color: #B0B0B0; /* Color inicial */
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.contact-info .social-links a:hover {
-    color: #50fa7b;
+.contact-info .social-links a:hover .si,
+.main-footer .social-links a:hover .si {
+    color: #50fa7b; /* Color al pasar el ratón */
+    transform: translateY(-3px); /* Pequeño efecto */
 }
+
 
 .contact-form .form-group {
     margin-bottom: 20px;
@@ -607,6 +777,8 @@ ul {
     .about-us-section .container,
     .services-section .container,
     .awards-section .container,
+    .projects-section .container, /* Añadido projects a la media query */
+    .testimonials-section .container, /* Añadido testimonials a la media query */
     .faq-section .container,
     .contact-content { /* Añadir contact-content a esta media query */
         grid-template-columns: 1fr; /* Una columna en tablets */
@@ -624,7 +796,7 @@ ul {
     .about-cards-grid {
         grid-template-columns: 1fr; /* Una columna en móviles */
     }
-    .services-grid, .awards-grid { /* Ajuste para servicios y awards en pantallas más pequeñas */
+    .services-grid, .awards-grid, .projects-grid, .testimonials-grid { /* Ajuste para grids en pantallas más pequeñas */
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     }
     .contact-info {
@@ -704,13 +876,13 @@ ul {
     .section-header .section-description {
         font-size: 0.95em;
     }
-    .service-card h3 {
+    .service-card h3, .projects-grid .project-card h3, .testimonial-card .client-name {
         font-size: 1.3em;
     }
-    .service-card p {
+    .service-card p, .projects-grid .project-card p, .testimonial-card .quote {
         font-size: 0.9em;
     }
-    .awards-grid { /* Ajuste para awards en móviles */
+    .awards-grid, .testimonials-grid, .projects-grid { /* Ajuste para grids en móviles */
         grid-template-columns: 1fr;
     }
     .award-card h3 {
@@ -740,8 +912,8 @@ ul {
     .contact-info p {
         font-size: 0.95em;
     }
-    .contact-info .social-links a {
-        font-size: 1.8em;
+    .contact-info .social-links a .si {
+        font-size: 1.5em;
     }
     .contact-form label {
         font-size: 0.9em;
